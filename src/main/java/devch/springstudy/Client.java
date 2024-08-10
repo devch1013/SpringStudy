@@ -10,11 +10,6 @@ public class Client {
         BeanFactory beanFactory = new AnnotationConfigApplicationContext(ObjectFactory.class); // object factory를 사용해서 bean factory를 구성해라!
         // ObjectFactory에도 annotation 달아줘야함
         PaymentService paymentService = beanFactory.getBean(PaymentService.class);
-        OrderService orderService = beanFactory.getBean(OrderService.class);
-
-        System.out.println(paymentService.exRateProvider == orderService.exRateProvider);
-
-        
 
         Payment payment = paymentService.prepare(100L, "USD", BigDecimal.valueOf(50.7));
         System.out.println(payment);
