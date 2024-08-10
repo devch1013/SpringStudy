@@ -1,8 +1,11 @@
 package devch.springstudy;
 
+import org.springframework.stereotype.Component;
+
 import java.io.IOException;
 import java.math.BigDecimal;
 
+//@Component // ExRateProvider를 상속받은 Component가 두개 있으면 에러
 public class SimpleExRateProvider implements ExRateProvider {
     @Override
     public BigDecimal getExRate(String currency) throws Exception {
