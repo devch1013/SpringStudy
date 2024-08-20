@@ -1,4 +1,4 @@
-package devch.springstudy;
+package devch.springstudy.exrate;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

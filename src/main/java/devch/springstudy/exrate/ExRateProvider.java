@@ -1,4 +1,4 @@
-package devch.springstudy;
+package devch.springstudy.exrate;
 
 import java.io.IOException;
 import java.math.BigDecimal;

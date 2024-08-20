@@ -1,4 +1,4 @@
-package devch.springstudy;
+package devch.springstudy.exrate;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

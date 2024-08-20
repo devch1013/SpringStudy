@@ -1,6 +1,6 @@
-package devch.springstudy;
+package devch.springstudy.payment;
 
-import org.springframework.stereotype.Component;
+import devch.springstudy.exrate.ExRateProvider;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
