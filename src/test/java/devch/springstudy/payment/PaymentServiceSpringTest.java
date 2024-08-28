@@ -1,13 +1,9 @@
 package devch.springstudy.payment;
 
-import devch.springstudy.ObjectFactory;
-import devch.springstudy.TestObjectFactory;
-import org.junit.jupiter.api.DisplayName;
+import devch.springstudy.TestPaymentConfig;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
@@ -17,7 +13,7 @@ import static java.math.BigDecimal.valueOf;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = TestObjectFactory.class)
+@ContextConfiguration(classes = TestPaymentConfig.class)
 class PaymentServiceSpringTest {
     @Autowired PaymentService paymentService;
     @Autowired ExRateProviderStub exRateProviderStub;

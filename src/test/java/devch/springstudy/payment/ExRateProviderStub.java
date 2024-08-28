@@ -1,7 +1,5 @@
 package devch.springstudy.payment;
 
-import devch.springstudy.exrate.ExRateProvider;
-
 import java.math.BigDecimal;
 
 public class ExRateProviderStub implements ExRateProvider {

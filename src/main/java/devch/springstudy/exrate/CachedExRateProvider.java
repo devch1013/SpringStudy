@@ -1,5 +1,7 @@
 package devch.springstudy.exrate;
 
+import devch.springstudy.payment.ExRateProvider;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 

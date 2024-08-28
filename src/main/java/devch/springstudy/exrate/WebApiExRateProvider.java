@@ -1,6 +1,7 @@
 package devch.springstudy.exrate;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import devch.springstudy.payment.ExRateProvider;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
