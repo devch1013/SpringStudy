@@ -2,6 +2,7 @@ package devch.springstudy.exrate;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import devch.springstudy.api.SimpleApiExecutor;
 import devch.springstudy.payment.ExRateProvider;
 
 import java.io.BufferedReader;
@@ -31,7 +32,7 @@ public class WebApiExRateProvider implements ExRateProvider {
         }
         String response;
         try {
-            response = executeApi(uri);
+            response = new SimpleApiExecutor().execute(uri);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -48,12 +49,4 @@ public class WebApiExRateProvider implements ExRateProvider {
         return data.rates().get("KRW");
     }
 
-    private static String executeApi(URI uri) throws IOException {
-        String response;
-        HttpURLConnection connection = (HttpURLConnection) uri.toURL().openConnection();
-        try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(connection.getInputStream()))){
-            response = bufferedReader.lines().collect(Collectors.joining());
-        }
-        return response;
-    }
 }
