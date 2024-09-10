@@ -8,7 +8,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import java.math.BigDecimal;
 
 public class Client {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         BeanFactory beanFactory = new AnnotationConfigApplicationContext(PaymentConfig.class); // object factory를 사용해서 bean factory를 구성해라!
         // ObjectFactory에도 annotation 달아줘야함
         PaymentService paymentService = beanFactory.getBean(PaymentService.class);

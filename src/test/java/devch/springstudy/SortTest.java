@@ -29,6 +29,6 @@ public class SortTest {
     @Test
     void sortAlreadySorted(){
         List<String> list = sort.sortByLength(Arrays.asList("b", "aa", "ccc"));
-        Assertions.assertThat(list).isEqualTo(List.of("c", "aa", "ccc"));
+        Assertions.assertThat(list).isEqualTo(List.of("b", "aa", "ccc"));
     }
 }

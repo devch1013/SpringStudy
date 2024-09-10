@@ -28,6 +28,6 @@ public class ClockTest {
         Thread.sleep(1000);
         LocalDateTime dt2 = LocalDateTime.now(clock);
 
-        Assertions.assertThat(dt2).isAfter(dt1);
+        Assertions.assertThat(dt2).isEqualTo(dt1);
     }
 }
